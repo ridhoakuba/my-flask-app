@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+/* ===== halaman utama ===== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    color: #222;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1, h2 {
+    text-align: center;
+    font-weight: 700;
+}
+
+
+/* ===== halaman ===== */
+.hero {
+    position: relative;
+    height: 100vh;
+
+    background-image: 
+    url('/static/image/Element.png'), 
+    url('/static/image/esss.jpg');
+    background-size: contain, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+    align-self: first baseline;
+    position: relative;
+    padding: 20px;
+    color: white;
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeUp 1.5s ease forwards 0.7s;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* LOGO RESPONSIVE */
+.logo-hero {
+    height: 220px;   
+    opacity: 0;
+    transform: scale(0.7);
+    animation: fadeZoom 1.4s ease forwards 0.5s;
+}
+@keyframes fadeZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* TEXT RESPONSIVE */
+.hero-content h1 {
+    font-family: "Kaushan Script", cursive;
+    font-size: clamp(32px, 5vw, 1000px); /* jauh lebih besar */
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    max-width: 1200px;   /* Lebarkan area teks agar tidak turun banyak */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-content p {
+    font-size: clamp(14px, 1.4vw, 20px); /* lebih kecil & rapi */
+    margin-bottom: 20px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+
+/* BUTTON RESPONSIVE */
+.btn-primary {
+    background: #00aaff;
+    color: #fff;
+    padding: clamp(8px, 1.2vw, 12px) clamp(15px, 2vw, 25px);
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: clamp(12px, 1.5vw, 16px);
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #0088cc;
+}
+
+/* ===== FORM SECTION ===== */
+.form-section {
+    padding: 40px 20px;
+}
+
+.form-container {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    
+}
+
+.form-container label {
+    font-weight: 600;
+    text-align: left;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+.btn-primary1 {
+    background: #00aaff;
+    color: #fff;
+    align-content: center;
+    padding: clamp(8px, 1.2vw, 12px) clamp(15px, 2vw, 25px);
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: clamp(12px, 1.5vw, 16px);
+}
+
+.btn-primary1:hover {
+    background: #0088cc;
+}
+/* ===== HASIL SECTION ===== */
+.hasil-section {
+    background: #003366;
+    padding: 40px 20px;
+    color: white;
+}
+
+.hasil-box {
+    max-width: 700px;
+    margin: auto;
+    padding: 25px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 12px;
+    background: white;
+    color: black;
+}
+
+/* Warna status */
+.status-aktif {
+    background: #c1ffb0 !important;
+    color: #009900 !important;
+}
+.status-pasif {
+    background: #fff7b0 !important;
+    color: #d4a100 !important;
+}
+.status-berhenti {
+    background: #ffb0b0 !important;
+    color: #cc0000 !important;
+}

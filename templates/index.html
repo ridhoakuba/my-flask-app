@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Analisis Pelanggan - Es Kristal Premium</title>
+   <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+           <img src="/static/image/PNG LOGO ES.png" class="logo-hero"/>
+            <h1>Selamat datang di Sistem Analisis <br>
+                Pelanggan Es Kristal Premium</h1>
+            <p>Platform ini membantu Anda memahami perilaku pelanggan aktif, pasif, dan berhenti untuk mendukung pengambilan keputusan yang lebih cepat dan akurat.</p>
+            <a href="#analisis" class="btn-primary">Ayo Analisis</a>
+        </div>
+    </header>
+<section id="analisis" class="form-section">
+    <h2>Analisis Pelanggan</h2>
+    <div class="form-container">
+
+        <label>Frekuensi Pembelian :</label>
+        <input type="number" id="frekuensi" placeholder="Masukkan jumlah pembelian per bulan" />
+
+        <label>Rata-rata Pembelian :</label>
+        <input type="number" id="rata_pengeluaran" placeholder="Masukkan rata-rata pembelian" />
+
+        <label>Jarak Pengiriman :</label>
+        <input type="number" id="jarak" placeholder="Masukkan jarak pengiriman (km)" />
+
+        <button class="btn-primary1" onclick="analisis()">Analisis</button>
+    </div>
+</section>
+
+<section id="hasil" class="hasil-section">
+    <h2>Hasil Analisis</h2>
+    <div id="hasilTeks" class="hasil-box">-</div>
+</section>
+<script src="/static/script.js"></script>
+</body>
+</html>
