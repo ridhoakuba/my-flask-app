@@ -1,5 +1,5 @@
 flask==2.0.1
-flask-cors==3.1.1
+flask-cors==3.0.10  # Versi terbaru yang masih stabil
 joblib==1.0.1
 scikit-learn==0.24.2
 numpy==1.20.3
