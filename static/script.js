@@ -11,8 +11,8 @@ async function analisis() {
         return;
     }
 
-    try {
-        let response = await fetch("http://localhost:5000/predict", {
+ try {
+        let response = await fetch("https://spekristalpremium.onrender.com/predict", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
