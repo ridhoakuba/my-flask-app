@@ -1,4 +1,4 @@
-flask==3.1.4
+flask==2.0.2
 flask-cors==3.0.10  # Versi terbaru yang masih stabil
 joblib==1.5.2
 scikit-learn==1.7.2
