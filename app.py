@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import joblib
 import numpy as np
 from flask_cors import CORS
@@ -9,6 +9,10 @@ CORS(app)
 # Load model & scaler
 model = joblib.load("knn_model.pkl")
 scaler = joblib.load("scaler.pkl")
+
+@app.route("/")
+def home():
+    return render_template("index.html")
 
 @app.route("/predict", methods=["POST"])
 def predict():
